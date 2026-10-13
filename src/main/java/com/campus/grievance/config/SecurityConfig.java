@@ -38,7 +38,11 @@ public class SecurityConfig {
     @Bean
     CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration c = new CorsConfiguration();
-        c.setAllowedOrigins(List.of("http://localhost:5500", "http://127.0.0.1:5500"));
+        c.setAllowedOrigins(List.of(
+        	    "http://localhost:5500",
+        	    "http://127.0.0.1:5500",
+        	    "https://grievance-frontend-uzc4.vercel.app"
+        	));
         c.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "OPTIONS"));
         c.setAllowedHeaders(List.of("*"));
         UrlBasedCorsConfigurationSource s = new UrlBasedCorsConfigurationSource();
